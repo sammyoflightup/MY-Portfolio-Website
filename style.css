@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 200px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav .link ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav .link ul a {
+    text-decoration: none;
+    color: #2a2a2a;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav .link ul a.active {
+    color: #f58f0a;
+}
+
+.nav .link ul a:hover {
+    color: hsl(29, 93%, 48%);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.main .men {
+    width: 400px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.main .men:hover {
+    transform: scale(1.3);
+}
+
+.main .main-detail {
+    color: #111;
+}
+
+.main .main-detail h1 {
+    font-size: 50px;
+}
+
+.main .main-detail h3.creative-designer {
+    font-size: 20px;
+    font-style: italic;
+    color: #333;
+}
+
+.main .btn {
+    margin-top: 20px;
+}
+
+.main .btn button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #f58f0a;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.main .btn button:hover {
+    background-color: #111;
+}
+
+.main .btn .btn-2 {
+    background-color: #333;
+}
+
+.main .btn .btn-2:hover {
+    background-color: #000;
+}
+
+.social {
+    margin-top: 20px;
+}
+
+.social a {
+    color: #333;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social a:hover {
+    color: #f58f0a;
+}
+
+.sub-btn a {
+    position: absolute;
+    bottom: 60px;
+    right: 50px;
+    padding: 10px 20px;
+    background: rgb(228, 127, 12);
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.sub-btn a.active {
+    background: black;
+}
+
+.sub-btn a:hover {
+    background: rgb(0, 0, 3);
+}
+
+@media (max-width: 768px) {
+    .nav {
+        padding: 20px;
+    }
+
+    .main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main .men {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .main .main-detail h1 {
+        font-size: 36px;
+    }
+
+    .gallery-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-item {
+        width: 90%;
+    }
+}
+
+/* About Section Styles */
+#about {
+    padding: 40px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#about p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Work Section Styles */
+#work {
+    padding: 40px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#work h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay .text {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.link-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.link-container a {
+    text-decoration: none;
+    color: #f7ab08;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.link-container a:hover {
+    color: #100358;
+}
+
+/* Experience */
+#experience, #contact {
+    padding: 40px;
+    background-color: #fff;
+    text-align: center;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Experience</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h2 {
+            color: #f5a40f;
+            text-align: center;
+        }
+        .job {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .job h3 {
+            margin: 0;
+            color: #555;
+        }
+        .job p {
+            margin: 5px 0;
+        }
+        .job ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .job li {
+            margin-bottom: 5px;
+        }
+       
+        <!-- Contact Section -->
+#contact {
+    padding: 40px;
+    background-color: #f9f9f9;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+}
+
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #f58f0a;
+}
+
+#contact p {
+    margin: 0 auto;
+    max-width: 600px;
+    line-height: 1.6;
+    color: #555;
+}
+
+#contact a {
+    color: #f58f0a;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+#contact a:hover {
+    color: #333;
+}
+/* Core Competencies Style */
+#core-competencies {
+    margin: 20px 0;
+    max-width: 100%;
+    line-height: 1.6;
+    color: #020000;
+    text-align: left;  /* Aligns text to the left */
+    padding-left: 20px; /* Adds padding to create some space from the left edge */
+}
+
+/* Core Competencies Header */
+#core-competencies h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #020000;
+}
+
+/* Core Competencies List */
+#core-competencies ul {
+    list-style-type: disc;
+    padding-left: 20px; /* Adds indentation to the list */
+}
+
+#core-competencies ul li {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #020000;
+}
+
+
+
+
+        /* Footer Styles */
+footer {
+    background-color: #333; /* Background color for the footer */
+    color: #fff; /* Text color */
+    text-align: center; /* Center the text */
+    padding: 20px; /* Padding around the text */
+    position: fixed; /* Make the footer stick to the bottom */
+    width: 100%; /* Full width */
+    bottom: 0; /* Stick to the bottom of the page */
+    left: 0; /* Align to the left edge */
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+}
